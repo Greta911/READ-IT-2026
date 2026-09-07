@@ -2,10 +2,10 @@ RewriteEngine on
 
 
 
-# ROUTE TESTS.SHOW
+# ROUTE POSTS.SHOW
 # RewriteRule ^pattern$ cible [flag]
-# PATTERN: tests/x/slug.html
-# RewriteRule ^tests$ index.php [L]
-# TARGET: index.php?tests=show&id=x
+# PATTERN: /posts/id/slug
+# RewriteRule ^posts$ index.php [L]
+# TARGET: index.php?posts=show&id=x
 
-RewriteRule ^tests\/([1-9][0-9]*)/[a-z0-9][a-z0-9\-]*[a-z0-9]\.html$ ?tests=show&id=$1 [L]
+RewriteRule ^posts\/([1-9][0-9]*)\/[a-z0-9]([a-z0-9\-]*[a-z0-9])*$ index.php?posts=show&id=$1 [L]
